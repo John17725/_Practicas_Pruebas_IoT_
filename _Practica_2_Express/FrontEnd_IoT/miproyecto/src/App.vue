@@ -4,11 +4,25 @@
     <br>
     <button class="button-32" type="button" @click="cambio">Change Message 🔁</button>
     <HelloWorld :msg="msg"/>
+    <div>
+      <Operators></Operators>
+    </div>
+    <div>
+      <Condicionales></Condicionales>
+    </div>
+    <div>
+      <CicloFor></CicloFor>
+    </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Operators from './components/operadores.vue'
+import Condicionales from './components/condicionales.vue'
+import CicloFor from './components/cicloFor.vue'
+
+
 
 export default {
   name: 'App',
@@ -18,12 +32,15 @@ export default {
     };
   },
   components: {
-    HelloWorld
+    HelloWorld,
+    Operators,
+    Condicionales,
+    CicloFor,
   },
   methods:{
     cambio(){
       this.msg = "Hola mundo 🗺"
-    }
+    },
   }
 }
 </script>
